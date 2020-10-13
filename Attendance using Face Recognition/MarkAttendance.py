@@ -2,10 +2,10 @@ import psycopg2
 from datetime import datetime
 from datetime import date
 import sys
-import MariaConnection
+import PostgresConnection
 
 def markAttendance(name, designation):
-    conn = MariaConnection.connectwithPostgreSQL()
+    conn = PostgresConnection.connectwithPostgreSQL()
     date_object = date.today()
     now = datetime.now()
     time_object = now.strftime("%H:%M:%S")
